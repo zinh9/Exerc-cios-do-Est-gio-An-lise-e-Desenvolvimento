@@ -12,16 +12,16 @@ public class Exercicio_3 {
 	public static void main(String[] args) {
 		try {
 			Gson gson = new Gson();
-            FileReader reader = new FileReader("C:\\Users\\enzos\\git\\repository\\Tecnica\\src\\exercicios\\dados.json");
-            JsonArray jsonArray = gson.fromJson(reader, JsonArray.class);
-            reader.close();
-            
-            double[] faturamentoDiario = new double[jsonArray.size()];
-            for (int i = 0; i < jsonArray.size(); i++) {
-                JsonElement element = jsonArray.get(i);
-                JsonObject jsonElement = element.getAsJsonObject();
-                faturamentoDiario[i] = jsonElement.get("valor").getAsDouble();
-            }
+            		FileReader reader = new FileReader("C:\\Users\\enzos\\git\\repository\\Tecnica\\src\\exercicios\\dados.json");
+		        JsonArray jsonArray = gson.fromJson(reader, JsonArray.class);
+		        reader.close();
+		            
+		        double[] faturamentoDiario = new double[jsonArray.size()];
+		        for (int i = 0; i < jsonArray.size(); i++) {
+		        	JsonElement element = jsonArray.get(i);
+		                JsonObject jsonElement = element.getAsJsonObject();
+		                faturamentoDiario[i] = jsonElement.get("valor").getAsDouble();
+		        }
 			
 			
 			// O menor valor de faturamento ocorrido em um dia do mês
