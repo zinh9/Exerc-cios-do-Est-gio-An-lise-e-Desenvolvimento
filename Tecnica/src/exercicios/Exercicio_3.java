@@ -12,11 +12,8 @@ public class Exercicio_3 {
 	public static void main(String[] args) {
 		try {
 			Gson gson = new Gson();
-			FileReader reader = new FileReader("C:\\Users\\enzos\\eclipse-workspace\\Tecnica\\src\\exercicios\\faturamentos.json");
-
-			
-            JsonObject jsonObject = gson.fromJson(reader, JsonObject.class);
-            JsonArray jsonArray = jsonObject.getAsJsonArray("faturamento");
+            FileReader reader = new FileReader("C:\\Users\\enzos\\git\\repository\\Tecnica\\src\\exercicios\\dados.json");
+            JsonArray jsonArray = gson.fromJson(reader, JsonArray.class);
             reader.close();
             
             double[] faturamentoDiario = new double[jsonArray.size()];
